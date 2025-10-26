@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="StreamingTOM: Streaming Token Compression for Efficient Video Understanding (arXiv:2510.18269)">
+  <meta name="keywords" content="Video Understanding, Token Compression, Efficient MLLM, Streaming Video">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamingTOM: Streaming TOken coMpression for Efficient Video Understanding</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://YIGE24.github.io/StreamingTOM">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">StreamingTOM: Streaming TOken coMpression for Efficient Video Understanding</h1>
+            <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                    <a href="https://YIGE24.github.io">Xueyi Chen</a><sup>1,2</sup>&#8192;
+                  </span>
+                  <span class="author-block">
+                    <a href="https://kd-tao.github.io">Keda Tao</a><sup>1,3</sup>&#8192;
+                  </span>
+                  <span class="author-block">
+                    <a href="https://cokeshao.github.io/">Kele Shao</a><sup>1,4,3</sup>&#8192;
+                  </span>
+                  <span class="author-block">
+                    <a href="https://huanwang.tech/">Huan Wang</a><sup>1*</sup>&#8192;
+                  </span>
+            </div>
+            <!-- Removed conference info for double-blind review -->
+
+            <div class="is-size-5 publication-authors">
+                <span><sup>1</sup>Westlake University</span>
+                <span><sup>2</sup>The Chinese University of Hong Kong</span>
+                <span><sup>3</sup>Zhejiang University</span>
+                <span><sup>4</sup>SII</span>
+            </div>
+
+            <div style="font-size:15px">
+              <span><sup>&ast;</sup>Corresponding author: wanghuan@westlake.edu.cn</span></br></br>
+            </div>
+            
+            <div class="columns is-centered">
+              <div class="column is-narrow">
+                <figure class="image">
+                  <img src="figure/wlu-logo.png" alt="Westlake University" style="height: 96px; object-fit: contain;">
+                </figure>
+              </div>
+              <div class="column is-narrow">
+                <figure class="image">
+                  <img src="figure/cuhk_logo.png" alt="CUHK" style="height: 96px; object-fit: contain;">
+                </figure>
+              </div>
+              <div class="column is-narrow">
+                <figure class="image">
+                  <img src="figure/zju-logo.jpg" alt="Zhejiang University" style="height: 96px; object-fit: contain;">
+                </figure>
+              </div>
+              <div class="column is-narrow">
+                <figure class="image">
+                  <img src="figure/sii_logo.svg" alt="SII" style="height: 96px; object-fit: contain;">
+                </figure>
+              </div>
+            </div>
+
+
+            <div class="columns is-centered">
+              <div class="column is-narrow">
+              <figure class="image is-256x128">
+                <img src="figure/encodelab_logo.png" alt="ENCODE Lab" style="width: 384px; height: 96px;">
+              </figure>
+              </div>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2510.18269.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2510.18269" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/YIGE24/StreamingTOM"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <div class="tldr">
+    TODO
+  </div> -->
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align='center'>
+          <a><img src="figure/teaser.png"  height="300" ></a>
+        </div>
+        <div class="content has-text-justified">
+          <strong>Left</strong>: StreamingTOM is a training-free, two-stage framework: Causal Temporal Reduction selects pre-LLM tokens with a causal, fixed-budget policy, and Online Quantized Memory maintains compact kv-cache via 4-bit quantization with on-demand retrieval.
+          <strong>Right</strong>: on LLaVA-OV-7B, StreamingTOM achieves a 15.7× kv-cache compression ratio; compared to prior SOTA (LiveVLM), it delivers 1.2× lower peak memory and 2× faster TTFT.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            Unlike offline processing, streaming video vision-language models face two fundamental constraints: <strong>causality</strong> and <strong>accumulation</strong>.
+            Causality prevents access to future frames that offline methods exploit, while accumulation causes tokens to grow unbounded, creating efficiency bottlenecks.
+            However, existing approaches only regulate post-LLM kv-cache, leaving costly pre-LLM prefill unchanged.
+            We introduce <strong>StreamingTOM</strong>, a training-free, plug-and-play two-stage framework that addresses both pre-LLM and post-LLM bottlenecks with predictable latency.
+            <strong>Causal Temporal Reduction</strong> imposes a fixed per-frame budget and selects tokens based on adjacent-frame changes and token saliency, drastically reducing per-frame prefill cost by processing only a compact subset of visual tokens per frame instead of all visual tokens.
+            <strong>Online Quantized Memory</strong> stores tokens in 4-bit format, retrieves relevant groups on demand, and dequantizes them, keeping the active kv-cache bounded regardless of stream length.
+            Experiments demonstrate our method achieves <strong>15.7× kv-cache compression</strong>, <strong>1.2× lower peak memory</strong> and <strong>2× faster TTFT</strong> compared to prior SOTA.
+            StreamingTOM maintains state-of-the-art accuracy among training-free methods with an average of <strong>63.8%</strong> on offline benchmarks and <strong>55.8%/3.7</strong> on RVS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Method Overview Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content">
+            <figure class="image">
+              <img src="figure/method.png" alt="StreamingTOM Architecture Overview">
+            </figure>
+            <div class="has-text-justified" style="margin-top: 20px;">
+              <p>
+                <strong>StreamingTOM Architecture</strong>: The framework consists of two coordinated pipelines.
+                The vision pipeline encodes each frame and applies Causal Temporal Reduction to condense redundant tokens into compact groups, which are written to an online memory for reuse.
+                The query pipeline processes questions and drives the decoder to interact with the memory through Online Quantized Memory, which stores groups at 4-bit precision, retrieves at most <i>k</i> groups on demand, and dequantizes them for efficient generation.
+              </p>
+            </div>
+
+            <!-- CTR Details -->
+            <div style="margin-top: 40px;">
+              <h3 class="title is-4">Causal Temporal Reduction (CTR) Pipeline</h3>
+              <figure class="image">
+                <img src="figure/ctr.png" alt="CTR Pipeline Details">
+              </figure>
+              <div class="has-text-justified" style="margin-top: 20px;">
+                <p>
+                  <strong>CTR compression pipeline</strong>: The algorithm processes visual tokens from consecutive frames using a 2-frame window (current and previous),
+                  producing a binary classification (static, dynamic) through similarity comparison. The adaptive budget allocation dynamically distributes compression
+                  resources based on content, followed by dual-path processing: dpc clustering for static tokens and attention-based selection for dynamic tokens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Experimental Results</h2>
+
+          <!-- Table 1: Offline Evaluation -->
+          <div class="content" style="margin-top: 30px;">
+            <h3 class="title is-4">Offline Video Understanding Benchmarks</h3>
+            <figure class="image">
+              <img src="figure/table1.png" alt="Table 1: Offline evaluation results">
+            </figure>
+            <p class="has-text-justified" style="margin-top: 20px;">
+              <strong>Table 1:</strong> Offline evaluation across three long-video benchmarks. StreamingTOM achieves state-of-the-art performance among training-free streaming methods with 63.8% average accuracy,
+              outperforming both StreamMem (63.1%) and LiveVLM (60.9%). The method demonstrates consistent improvements across VideoMME, MLVU, and EgoSchema benchmarks.
+            </p>
+          </div>
+
+          <!-- Table 2: Streaming Evaluation -->
+          <div class="content" style="margin-top: 40px;">
+            <h3 class="title is-4">Streaming Video Understanding (RVS Benchmarks)</h3>
+            <figure class="image">
+              <img src="figure/table2.png" alt="Table 2: RVS streaming results">
+            </figure>
+            <p class="has-text-justified" style="margin-top: 20px;">
+              <strong>Table 2:</strong> Evaluation results on RVS streaming benchmarks under memory-constrained settings (28GB GPU memory limit).
+              StreamingTOM achieves 55.8% average accuracy and 3.7 average score, outperforming all other training-free methods without CPU offloading.
+              This demonstrates the effectiveness of our two-stage compression approach for practical streaming deployment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Code & Usage</h2>
+          <div class="content has-text-justified">
+            <p>Code and detailed usage instructions will be available soon. Stay tuned!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{chen2025streamingtomstreamingtokencompression,
+  title={StreamingTOM: Streaming Token Compression for Efficient Video Understanding},
+  author={Chen, Xueyi and Tao, Keda and Shao, Kele and Wang, Huan},
+  year={2025},
+  eprint={2510.18269},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2510.18269}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
