@@ -1,0 +1,3 @@
+task: videomme_short_w_subtitle
+include: _default_template_yaml
+process_docs: !function utils.videomme_process_docs_short
